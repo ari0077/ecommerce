@@ -82,11 +82,11 @@
                     </th>
 
                     <td>
-                        <a class="btn btn-danger" onclick="return confirm('are you sure')" href="{{url('delete_product', $product->id)}}">delete</a>
+                        <a class="btn btn-danger" onclick="return confirm('are you sure')" href="{{url('delete_product, $product->id')}}">delete</a>
                     </td>
 
                     <td>
-                        <a class="btn btn-success" onclick="return confirm('apa kamu yakin?')" href="{{url('update_product', $product->id)}}">edit</a>
+                        <a class="btn btn-success" onclick="return confirm('apa kamu yakin?')" href="{{url('edit_product, $product->id')}}">edit</a>
                     </td>
                 </tr>
                 @endforeach

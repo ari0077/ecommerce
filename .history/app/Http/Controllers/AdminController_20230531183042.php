@@ -106,7 +106,7 @@ class AdminController extends Controller
         $product->image=$imagename;
         $product->save();
 
-        return redirect()->back()with('message', 'product success');
+        return redirect()->back();
 
 
     }

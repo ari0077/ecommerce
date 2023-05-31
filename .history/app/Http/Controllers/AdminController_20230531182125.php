@@ -84,29 +84,11 @@ class AdminController extends Controller
         $product=product::find($id);
 
         $product->title=$request->title;
-        $product->description=$request->description;
-        $product->price=$request->price;
-        $product->dis_pricee=$request->dis_price;
-        $product->catagor=$request->catagory;
-        $product->quantit=$request->quantity;
-
-        $image=$request->image;
-
-        if($image)
-        {
-            $imagename=time.'.'.$image->getClientOriginalExtension();
-        $request->$image->move('/product',$imagename);
-
-        $product->image=$imagename;
-        }
-
-        $imagename=time.'.'.$image->getClientOriginalExtension();
-        $request->$image->move('/product',$imagename);
-
-        $product->image=$imagename;
-        $product->save();
-
-        return redirect()->back()with('message', 'product success');
+        $product->title=$request->description;
+        $product->title=$request->price;
+        $product->title=$request->dis_price;
+        $product->title=$request->catagory;
+        $product->title=$request->quantity;
 
 
     }

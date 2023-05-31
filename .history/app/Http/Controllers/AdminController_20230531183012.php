@@ -94,10 +94,7 @@ class AdminController extends Controller
 
         if($image)
         {
-            $imagename=time.'.'.$image->getClientOriginalExtension();
-        $request->$image->move('/product',$imagename);
-
-        $product->image=$imagename;
+            
         }
 
         $imagename=time.'.'.$image->getClientOriginalExtension();
@@ -106,7 +103,7 @@ class AdminController extends Controller
         $product->image=$imagename;
         $product->save();
 
-        return redirect()->back()with('message', 'product success');
+        return redirect()->back();
 
 
     }

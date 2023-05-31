@@ -75,39 +75,6 @@ class AdminController extends Controller
     }
     public function update_product($id)
     {
-        $product=product::find($id);
-        $catagory=catagory::all();
-        return view('admin.update_product', compact('product','catagory'))
-    }
-    public function update_product_confirm(request $request,$id)
-    {
-        $product=product::find($id);
-
-        $product->title=$request->title;
-        $product->description=$request->description;
-        $product->price=$request->price;
-        $product->dis_pricee=$request->dis_price;
-        $product->catagor=$request->catagory;
-        $product->quantit=$request->quantity;
-
-        $image=$request->image;
-
-        if($image)
-        {
-            $imagename=time.'.'.$image->getClientOriginalExtension();
-        $request->$image->move('/product',$imagename);
-
-        $product->image=$imagename;
-        }
-
-        $imagename=time.'.'.$image->getClientOriginalExtension();
-        $request->$image->move('/product',$imagename);
-
-        $product->image=$imagename;
-        $product->save();
-
-        return redirect()->back()with('message', 'product success');
-
-
+        return view('admin.update_product')
     }
 }
