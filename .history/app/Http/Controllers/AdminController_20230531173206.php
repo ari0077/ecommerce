@@ -69,8 +69,5 @@ class AdminController extends Controller
     public function delete_product($id)
     {
         $product=product::find($id);
-        $product->delete();
-
-        return redirect()->back();
     }
 }

@@ -90,10 +90,10 @@ padding-bottom: 15px;
             </div>
             <div class="div_design">
                 <label>Product image here :</label>
-                <input type="file" name="image" required="">
+                <input type="file" name="image" required="0">
             </div>
             <div>
-                <input type="submit" value="Add product" class="btn btn-primary" >
+                <input type="submit" value="Add product" class="btn btn-primary">
             
             </div>
 

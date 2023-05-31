@@ -37,5 +37,5 @@ Route::middleware([
 
     route::post('/add_product', [AdminController::class, 'add_product']);
     route::get('/show_product', [AdminController::class, 'show_product']);
-    route::get('/delete_product/{id}', [AdminController::class, 'delete_product']);
+    route::get('/delete_product', [AdminController::class, 'delete_product']);
 });
