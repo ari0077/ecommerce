@@ -83,7 +83,7 @@ padding-bottom: 15px;
                     @foreach ($catagory as $catagory )
                         
                     
-                    <option value="{{$catagory->catagory_name}}">{{$catagory->catagory_name}}</option>
+                    <option value="">{{$catagory->catagory_name}}</option>
                     @endforeach
                 </select>
                 

@@ -82,7 +82,7 @@
         </div>
       </li>
       <li class="nav-item menu-items">
-        <a class="nav-link" href="{{url('view_catagory')}}">
+        <a class="nav-link" href="{{url('view_kategori')}}">
           <span class="menu-icon">
             <i class="mdi mdi-playlist-play"></i>
           </span>

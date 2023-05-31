@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Catagory;
-use App\Models\Product;
 
 use Illuminate\Http\Request;
 
@@ -31,27 +30,13 @@ class AdminController extends Controller
     }
     public function view_product()
     {
-        $catagory=catagory::all();
+        $catagory=new catagory;
         return view('admin.product', compact('catagory'));
     }
 
     public function add_product(request $request)
     {
-        $product=new product;
-        $product->title->$request->title;
-        $product->description->$request->description;
-        $product->price->$request->price;
-        $product->quantity->$request->quantity;
-        $product->discount_price->$request->dis_price;
-        $product->catagory->$request->catagory;
-
-        $image->$request->image;
-        $imagename=time().'.'.$image->getClientOriginalExtension();
-        $request->image->move('product',$imagename);
-        $product->image=$imagename;
-        $product->save();
-
-        return redirect()->back()->with('message', 'Product added sucesffuly');
+        return view('admin.');
     }
     public function delete_catagory($id)
     {

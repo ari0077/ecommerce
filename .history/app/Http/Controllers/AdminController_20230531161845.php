@@ -44,14 +44,14 @@ class AdminController extends Controller
         $product->quantity->$request->quantity;
         $product->discount_price->$request->dis_price;
         $product->catagory->$request->catagory;
-
+        
         $image->$request->image;
-        $imagename=time().'.'.$image->getClientOriginalExtension();
-        $request->image->move('product',$imagename);
+        $image=time().'.'.$image->getClientOriginalExtension();
+        $request->$image->move('product',$imagename);
         $product->image=$imagename;
         $product->save();
 
-        return redirect()->back()->with('message', 'Product added sucesffuly');
+        return redirect()->back();
     }
     public function delete_catagory($id)
     {
